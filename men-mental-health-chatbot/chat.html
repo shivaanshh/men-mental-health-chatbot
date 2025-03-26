@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindEase Chatbot</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Header/Navbar (same as on other pages) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MindEase</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html" class="active">Chat</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="mood.html">Mood Journal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Chat Interface Section -->
+  <main class="chat-section">
+    <h2>Anonymous Chat Support</h2>
+    <!-- Persona selection -->
+    <div class="persona-select">
+      <label for="persona">Chatbot Persona:</label>
+      <select id="persona">
+        <option value="buddy" selected>Friendly Buddy</option>
+        <option value="therapist">Professional Counselor</option>
+        <option value="coach">Motivational Coach</option>
+      </select>
+    </div>
+    <!-- Chat messages area -->
+    <div id="chat-container">
+      <div id="chat-messages">
+        <!-- Initial greeting (could also be inserted by JS on page load) -->
+        <div class="message bot" id="greeting-message">
+          👋 <span>Hello! I’m here to listen. How can I help you today?</span>
+        </div>
+      </div>
+      <!-- User input area -->
+      <div id="chat-input-area">
+        <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer with disclaimer -->
+  <footer>
+    <p><small>This AI is here to support you, but isn’t a licensed professional. For serious concerns, consider reaching out to a professional or emergency services.</small></p>
+  </footer>
+
+  <!-- Chat functionality script -->
+  <script src="assets/chatbot.js"></script>
+</body>
+</html>

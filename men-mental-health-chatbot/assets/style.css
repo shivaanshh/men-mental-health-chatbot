@@ -1,0 +1,291 @@
+/* General styles and theme colors */
+:root {
+    --primary-color: #264653;   /* dark teal (header background) */
+    --accent-color:  #2a9d8f;   /* teal (buttons, highlights) */
+    --bg-color:     #f5f5f5;    /* light grey background */
+    --text-color:   #333;       /* main text color */
+    --font-family: 'Open Sans', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 1em;
+  }
+  .navbar .logo {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  .navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .navbar .nav-links li a:hover,
+  .navbar .nav-links li a.active {
+    background-color: #3a5a6f; /* slightly lighter variant of primary */
+  }
+  
+  /* Hero section (landing page) */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 1em;
+    background-color: #eaf6f6; /* very light teal background for hero */
+  }
+  .hero-text {
+    flex: 1 1 500px;
+    padding: 1em;
+  }
+  .hero-text h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+  }
+  .hero-text p {
+    margin-bottom: 1em;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6em 1em;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .cta-button:hover {
+    background-color: #23877a;
+  }
+  .hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+    padding: 1em;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Features section on home */
+  .features {
+    padding: 1.5em 1em;
+    background-color: #fff;
+  }
+  .features h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+  }
+  .features ul {
+    list-style: disc inside;
+  }
+  .features li {
+    margin: 0.5em 0;
+  }
+  
+  /* Chat section */
+  .chat-section {
+    padding: 1.5em 1em;
+    max-width: 800px;
+    margin: auto;
+  }
+  .chat-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+  }
+  .persona-select {
+    margin-bottom: 1em;
+  }
+  .persona-select label {
+    font-weight: 600;
+    margin-right: 0.5em;
+  }
+  .persona-select select {
+    padding: 0.3em;
+  }
+  #chat-container {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    min-height: 300px;
+  }
+  #chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 0.5em;
+  }
+  .message {
+    max-width: 80%;
+    padding: 0.5em 0.75em;
+    margin: 0.3em 0;
+    border-radius: 5px;
+    line-height: 1.4;
+  }
+  .message.bot {
+    background-color: #e9f5f5; /* light teal/gray for bot messages */
+    align-self: flex-start;
+  }
+  .message.user {
+    background-color: var(--accent-color);
+    color: #fff;
+    align-self: flex-end;
+  }
+  .message.bot::before {
+    content: \"🤖 \";
+  }
+  .message.user::before {
+    content: \"🧑 \";
+  }
+  #chat-input-area {
+    display: flex;
+    gap: 0.5em;
+  }
+  #user-input {
+    flex: 1;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  #send-btn {
+    padding: 0.5em 1em;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  #send-btn:hover:disabled {
+    cursor: default;
+  }
+  #send-btn:disabled {
+    background-color: #94d2cc; /* lighter accent when disabled */
+  }
+  
+  /* Resources section */
+  .resources-section {
+    padding: 1.5em 1em;
+    max-width: 800px;
+    margin: auto;
+  }
+  .resources-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+  }
+  .resource-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .resource-list li {
+    background: #fff;
+    padding: 1em;
+    margin: 0.5em 0;
+    border-left: 4px solid var(--accent-color);
+  }
+  .resource-list a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  .resource-list a:hover {
+    color: var(--accent-color);
+  }
+  .resource-list em {
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  /* Journal section */
+  .journal-section {
+    padding: 1.5em 1em;
+    max-width: 600px;
+    margin: auto;
+  }
+  .journal-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+  }
+  .journal-input label {
+    font-weight: 600;
+    margin-top: 0.5em;
+    display: inline-block;
+  }
+  #mood, #entry {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  #save-entry {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  #save-entry:hover {
+    background-color: #23877a;
+  }
+  .journal-entries {
+    background: #fff;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  .journal-entries ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .journal-entries li {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-bottom: 1px solid #eee;
+  }
+  .journal-entries li:last-child {
+    border-bottom: none;
+  }
+  .journal-entries .entry-date {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #eee;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 2em;
+  }
+  footer p {
+    color: #555;
+  }
+  

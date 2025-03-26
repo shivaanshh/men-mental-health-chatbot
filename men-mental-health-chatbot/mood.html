@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Journal – Check-In</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MindEase</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="mood.html" class="active">Mood Journal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="journal-section">
+    <h2>Mood Check-In</h2>
+    <p>Take a moment to reflect on how you’re feeling. This journal is private to you (nothing is uploaded to a server).</p>
+    <div class="journal-input">
+      <label for="mood">Your Mood:</label>
+      <select id="mood">
+        <option value="😀">Happy</option>
+        <option value="🙂">Okay</option>
+        <option value="😟">Stressed</option>
+        <option value="😢">Sad</option>
+        <option value="😡">Angry</option>
+      </select>
+      <br />
+      <label for="entry">Journal Entry:</label>
+      <textarea id="entry" rows="4" placeholder="Write about what's on your mind..." ></textarea>
+      <br />
+      <button id="save-entry">Save Entry</button>
+    </div>
+    <div class="journal-entries">
+      <h3>Your Past Entries:</h3>
+      <ul id="entries-list">
+        <!-- Previous entries will be appended here by script -->
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>Your journal entries are stored only in your browser and can be cleared by you at any time.</small></p>
+  </footer>
+
+  <script src="assets/mood.js"></script>
+</body>
+</html>
